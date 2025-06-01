@@ -10,6 +10,7 @@ import { GoalsModule } from './modules/goals/goals.module';
 import { TransactionsModule } from './modules/transactions/transactions.module';
 
 //import { UsersnestController } from './generate/modules/usersnest/usersnest.controller';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -23,7 +24,7 @@ import { TransactionsModule } from './modules/transactions/transactions.module';
       },
       inject: [ConfigService],
     }),
-    UsersModule,CategoriesModule,GoalsModule,TransactionsModule
+    UsersModule,CategoriesModule,GoalsModule,TransactionsModule, AuthModule
   ],
   controllers: [AppController,],
   providers: [AppService],
